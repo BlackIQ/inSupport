@@ -118,11 +118,11 @@
 								</div>
 								<div class="col-md-3">
 									<div class="metric">
-										<span class="icon"><i class="fa fa-graduation-cap"></i></span>
-										<p>
-											<span class="number">436</span>
-											<span class="title">Total Students</span>
-										</p>
+                                                                            <span class="icon"><i class="fa fa-graduation-cap"></i></span>
+                                                                            <p>
+                                                                                <span class="number">436</span>
+                                                                                <span class="title">Total Students</span>
+                                                                            </p>
 									</div>
 								</div>
 							</div>
@@ -135,10 +135,17 @@
 			<!-- END MAIN CONTENT -->
 		</div>
 		<!-- END MAIN -->
-		<div class="clearfix"></div>
-		<footer>
+                <footer class="bg-info container">
 			<div class="container-fluid">
-				<p class="copyright">&copy; <?php echo date("Y"); ?> <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+                            <div style="text-align: center;" class="copyright">
+                                <p class="back-link"><a href="http://<?php echo $ip; ?>/Narbon">Narbon</a></p>
+                                <p class="back-link">Created by <a href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
+                                <p class="back-link">Powered By <a href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
+                                <p class="back-link">
+                                    <i class="fa fa-telegram text-primary"></i>
+                                    <i class="fa fa-instagram text-danger"></i>
+                                </p>
+                            </div>
 			</div>
 		</footer>
 	</div>
