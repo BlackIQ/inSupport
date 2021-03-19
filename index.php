@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -124,6 +130,56 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="col-md-12">
+                                        <table class="table table-hover table-responsive table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">iCode</th>
+                                                    <th scope="col">iName</th>
+                                                    <th scope="col">Admin</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Hooman</td>
+                                                    <td>Mansori</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Ayande</td>
+                                                    <td>Khani</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Parsa</td>
+                                                    <td>Mirzaee</td>
+                                                    <td>Deactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Azadegan</td>
+                                                    <td>Hosseini</td>
+                                                    <td>Deactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Zohre</td>
+                                                    <td>Mohammadi</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>Mehr</td>
+                                                    <td>Tavakoli</td>
+                                                    <td>Deactive</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -134,19 +190,12 @@
             <!-- END MAIN CONTENT -->
         </div>
         <!-- END MAIN -->
-        <footer class="bg-info container">
+        <div class="clearfix"></div>
+            <footer>
                 <div class="container-fluid">
-                    <div style="text-align: center;" class="copyright">
-                        <p class="back-link"><a href="http://<?php echo $ip; ?>/Narbon">Narbon</a></p>
-                        <p class="back-link">Created by <a href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
-                        <p class="back-link">Powered By <a href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
-                        <p class="back-link">
-                            <i class="fa fa-telegram text-primary"></i>
-                            <i class="fa fa-instagram text-danger"></i>
-                        </p>
-                    </div>
+                    <p class="copyright">&copy; <?php echo date("Y"); ?> <a href="#">Narbon</a>. All Rights Reserved.</p>
                 </div>
-        </footer>
+            </footer>
     </div>
     <!-- END WRAPPER -->
     <!-- Javascript -->
