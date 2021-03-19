@@ -1,6 +1,23 @@
 <?php
 
+session_start();
 
+$server = "localhost";
+$user = "narbon";
+$passwd = "narbon";
+$db = "narbon";
+
+$conn = mysqli_connect($server, $user, $passwd, $db);
+
+$getip = "SELECT * FROM development";
+$res = mysqli_query($conn, $getip);
+
+while ($row = mysqli_fetch_assoc($res)) {
+    $ip = $row['ip'];
+}
+
+$sql = "SELECT * FROM institute";
+$result = mysqli_query($conn, $sql);
 
 ?>
 
@@ -136,47 +153,33 @@
                                                 <tr>
                                                     <th scope="col">iCode</th>
                                                     <th scope="col">iName</th>
-                                                    <th scope="col">Admin</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">Left</th>
                                                     <th scope="col">Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Hooman</td>
-                                                    <td>Mansori</td>
-                                                    <td>Active</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Ayande</td>
-                                                    <td>Khani</td>
-                                                    <td>Active</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Parsa</td>
-                                                    <td>Mirzaee</td>
-                                                    <td>Deactive</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Azadegan</td>
-                                                    <td>Hosseini</td>
-                                                    <td>Deactive</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Zohre</td>
-                                                    <td>Mohammadi</td>
-                                                    <td>Active</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">5</th>
-                                                    <td>Mehr</td>
-                                                    <td>Tavakoli</td>
-                                                    <td>Deactive</td>
-                                                </tr>
+                                                
+                                                <?php
+                                                if (mysqli_num_rows($result) > 0) {
+                                                    while ($row = mysqli_fetch_assoc($result)) {
+                                                        if ($row["status"] == "true") {
+                                                            $stat = "Active";
+                                                            $color = "success";
+                                                        }
+                                                        ?>
+                                                            <tr>
+                                                                <th scope="row"><a href="institute.php?code=<?php echo $row['code']; ?>`"><?php echo $row['code']; ?></a></th>
+                                                                <td><?php echo $row['iname']; ?></td>
+                                                                <td><?php echo $row["totald"]; ?></td>
+                                                                <td><?php echo $row["leftd"]; ?></td>
+                                                                <td class="text-<?php echo $color; ?>"><?php echo $stat; ?></td>
+                                                            </tr>
+                                                        <?php
+                                                    }
+                                                }
+
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
