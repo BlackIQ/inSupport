@@ -16,7 +16,7 @@ while ($row = mysqli_fetch_assoc($res)) {
     $ip = $row['ip'];
 }
 
-$sql = "SELECT * FROM report WHERE answer IS NULL ORDER BY id DESC";
+$sql = "SELECT * FROM report WHERE answer = 'no' ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
 
 ?>
