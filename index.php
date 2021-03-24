@@ -115,7 +115,7 @@ $result = mysqli_query($conn, $sql);
                                         <div class="metric">
                                             <span class="icon"><i class="fa fa-university"></i></span>
                                             <p>
-                                                <span class="number">12</span>
+                                                <span class="number">1</span>
                                                 <span class="title">Total Institutes</span>
                                             </p>
                                         </div>
@@ -124,7 +124,7 @@ $result = mysqli_query($conn, $sql);
                                         <div class="metric">
                                             <span class="icon"><i class="fa fa-microphone"></i></span>
                                             <p>
-                                                <span class="number">17</span>
+                                                <span class="number">2</span>
                                                 <span class="title">Total Agents</span>
                                             </p>
                                         </div>
@@ -133,7 +133,7 @@ $result = mysqli_query($conn, $sql);
                                         <div class="metric">
                                             <span class="icon"><i class="fa fa-book"></i></span>
                                             <p>
-                                                <span class="number">94</span>
+                                                <span class="number">8</span>
                                                 <span class="title">Total Teachers</span>
                                             </p>
                                         </div>
@@ -142,7 +142,7 @@ $result = mysqli_query($conn, $sql);
                                         <div class="metric">
                                             <span class="icon"><i class="fa fa-graduation-cap"></i></span>
                                             <p>
-                                                <span class="number">436</span>
+                                                <span class="number">64</span>
                                                 <span class="title">Total Students</span>
                                             </p>
                                         </div>
