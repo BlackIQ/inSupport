@@ -5,7 +5,7 @@ session_start();
 $server = "localhost";
 $user = "narbon";
 $passwd = "narbon";
-$db = "narbon";
+$db = "narbonn";
 
 $conn = mysqli_connect($server, $user, $passwd, $db);
 
@@ -69,7 +69,7 @@ $result = mysqli_query($conn, $sql);
                             <a href="index.php" class="active"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
                         <li>
-                            <a href="not.php" class=""><i class="fa fa-envelope-o"></i> <span>Tickets</span></a>
+                            <a href="tickets.php" class=""><i class="fa fa-envelope-o"></i> <span>Tickets</span></a>
                         </li>
                         <li>
                             <a href="#insub" data-toggle="collapse" class="collapsed"><i class="fa fa-bars"></i> <span>Pro Search</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
@@ -147,8 +147,8 @@ $result = mysqli_query($conn, $sql);
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <table class="table table-hover table-responsive table-bordered">
+                                    <div>
+                                        <table class="table table-hover table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">iCode</th>
@@ -163,16 +163,16 @@ $result = mysqli_query($conn, $sql);
                                                 <?php
                                                 if (mysqli_num_rows($result) > 0) {
                                                     while ($row = mysqli_fetch_assoc($result)) {
-                                                        if ($row["status"] == "true") {
+                                                        if ($row["status"] == "active") {
                                                             $stat = "Active";
                                                             $color = "success";
                                                         }
                                                         ?>
                                                             <tr>
-                                                                <th scope="row"><a href="institute.php?code=<?php echo $row['code']; ?>`"><?php echo $row['code']; ?></a></th>
-                                                                <td><?php echo $row['iname']; ?></td>
-                                                                <td><?php echo $row["totald"]; ?></td>
-                                                                <td><?php echo $row["leftd"]; ?></td>
+                                                                <th scope="row"><a href="institute.php?code=<?php echo $row['icode']; ?>`"><?php echo $row['icode']; ?></a></th>
+                                                                <td><?php echo $row['name']; ?></td>
+                                                                <td><?php echo $row["total"]; ?></td>
+                                                                <td><?php echo $row["lefts"]; ?></td>
                                                                 <td class="text-<?php echo $color; ?>"><?php echo $stat; ?></td>
                                                             </tr>
                                                         <?php
