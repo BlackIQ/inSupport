@@ -134,14 +134,37 @@ $username = $rowuser['fname'];
                                         <hr>
                                         <br>
                                         <div class="col-md-6">
-                                            <form>
+                                            <form method="post" action="show.php">
                                                 <div class="form-group">
                                                     <label for="answer">Answer</label>
-                                                    <input type="text" class="form-control" id="answer" placeholder="Answer">
+                                                    <input name="answer" type="text" class="form-control" id="answer" placeholder="Answer">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Send</button>
                                             </form>
                                         </div>
+                                        <?php
+                                        
+                                        $answer = $_POST['answer'];
+                                        
+                                        if (isset($answer)) {
+                                            $sql = "UPDATE report SET answer='$answer' WHERE code='$code'";
+                                            if (mysqli_query($conn, $sql)) {
+                                                ?>
+                                                <script>
+                                                    window.alert("Done!");
+                                                </script>
+                                                <?php
+                                            }
+                                            else {
+                                                ?>
+                                                <script>
+                                                    window.alert("<?php echo mysqli_error($conn); ?>");
+                                                </script>
+                                                <?php
+                                            }
+                                        }
+                                        
+                                        ?>
                                     </div>
                                 </div>
                             </div>
