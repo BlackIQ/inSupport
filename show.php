@@ -147,38 +147,21 @@ $username = $rowuser['fname'];
                                         $answer = $_POST['answer'];
                                         
                                         if (isset($answer)) {
-                                            $sql = "SELECT * FROM report WHERE answer = '$answer' AND code = '$code'";
-                                            $result = mysqli_query($conn, $sql);
+                                            $sql = "UPDATE report SET answer = '$answer' WHERE code = '$code'";
 
-
-                                            if (mysqli_num_rows($result) > 0) {
-                                                while ($row = mysqli_fetch_assoc($result)) {
-                                                    if ($row['code'] == $code && $row["answer"] == $answer) {
-                                                        ?>
-                                                            <script>
-                                                                window.alert("This is answered before.");
-                                                            </script>
-                                                        <?php
-                                                    }
-                                                }
+                                            if (mysqli_query($conn, $sql)) {
+                                                ?>
+                                                    <script>
+                                                        window.alert("Answered.");
+                                                    </script>
+                                                <?php
                                             }
                                             else {
-                                                $sql = "UPDATE report SET answer = '$answer'";
-
-                                                if (mysqli_query($conn, $sql)) {
-                                                    ?>
-                                                        <script>
-                                                            window.alert("Answered.");
-                                                        </script>
-                                                    <?php
-                                                }
-                                                else {
-                                                    ?>
-                                                        <script>
-                                                            window.alert("Didnt answered. Try Again!\n<?php echo mysqli_error($conn); ?>");
-                                                        </script>
-                                                    <?php
-                                                }
+                                                ?>
+                                                    <script>
+                                                        window.alert("Didnt answered. Try Again!\n<?php echo mysqli_error($conn); ?>");
+                                                    </script>
+                                                <?php
                                             }
                                         }
                                         
