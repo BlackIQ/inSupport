@@ -147,7 +147,7 @@ $username = $rowuser['fname'];
                                         $answer = $_POST['answer'];
                                         
                                         if (isset($answer)) {
-                                            $sql = "UPDATE report SET answer = '$answer' WHERE code = '$code'";
+                                            $sql = "UPDATE report SET answer = '$answer'";
 
                                             if (mysqli_query($conn, $sql)) {
                                                 ?>
@@ -155,6 +155,7 @@ $username = $rowuser['fname'];
                                                         window.alert("Answered.");
                                                     </script>
                                                 <?php
+                                                header("Location: http://$ip/NarbonSupport/tickets.php");
                                             }
                                             else {
                                                 ?>
@@ -162,6 +163,7 @@ $username = $rowuser['fname'];
                                                         window.alert("Didnt answered. Try Again!\n<?php echo mysqli_error($conn); ?>");
                                                     </script>
                                                 <?php
+                                                header("Location: http://$ip/NarbonSupport/show.php?report=$code");
                                             }
                                         }
                                         
