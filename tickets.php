@@ -2,6 +2,8 @@
 
 session_start();
 
+include("panels/nav.php");
+
 $server = "localhost";
 $user = "narbon";
 $passwd = "narbon";
@@ -46,7 +48,7 @@ $result = mysqli_query($conn, $sql);
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
-        <?php include("panels/nav.php"); ?>
+        <?php tickets(); ?>
         <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
         <?php include("panels/silebar.php"); ?>
