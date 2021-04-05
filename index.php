@@ -2,7 +2,7 @@
 
 session_start();
 
-include("panels/nav.php");
+include("panels/silebar.php");
 
 $server = "localhost";
 $user = "narbon";
