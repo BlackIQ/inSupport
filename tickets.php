@@ -48,7 +48,7 @@ $result = mysqli_query($conn, $sql);
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
-        <?php tickets(); ?>
+        <?php include("panels/silebar.php"); ?>
         <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
         <?php include("panels/silebar.php"); ?>
