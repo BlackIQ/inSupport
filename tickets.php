@@ -48,10 +48,10 @@ $result = mysqli_query($conn, $sql);
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
-        <?php include("panels/silebar.php"); ?>
+        <?php include("panels/nav.php"); ?>
         <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
-        <?php include("panels/silebar.php"); ?>
+        <?php tickets(); ?>
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN -->
         <div class="main">

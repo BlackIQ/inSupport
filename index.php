@@ -2,6 +2,8 @@
 
 session_start();
 
+include("panels/silebar.php");
+
 $server = "localhost";
 $user = "narbon";
 $passwd = "narbon";
@@ -46,10 +48,10 @@ $result = mysqli_query($conn, $sql);
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
-        <?php include("panels/silebar.php"); ?>
+        <?php include("panels/nav.php"); ?>
         <!-- END NAVBAR -->
         <!-- LEFT SIDEBAR -->
-        <?php include("panels/silebar.php"); ?>
+        <?php index(); ?>
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN -->
         <div class="main">
