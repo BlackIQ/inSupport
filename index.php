@@ -2,8 +2,6 @@
 
 session_start();
 
-include("panels/silebar.php");
-
 $server = "localhost";
 $user = "narbon";
 $passwd = "narbon";
@@ -17,6 +15,12 @@ $res = mysqli_query($conn, $getip);
 while ($row = mysqli_fetch_assoc($res)) {
     $ip = $row['ip'];
 }
+
+if ($_SESSION['status'] != true) {
+//    echo 'Sorry, login';
+}
+
+include("panels/silebar.php");
 
 $sql = "SELECT * FROM institute";
 $result = mysqli_query($conn, $sql);
