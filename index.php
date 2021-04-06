@@ -17,7 +17,7 @@ while ($row = mysqli_fetch_assoc($res)) {
 }
 
 if ($_SESSION['status'] != true) {
-//    echo 'Sorry, login';
+    header("Location: http://$ip/NarbonSupport/account");
 }
 
 include("panels/silebar.php");
