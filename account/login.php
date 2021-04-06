@@ -10,7 +10,7 @@ if ($_SESSION['status'] == true) {
 $code = $_POST['code'];
 $password = $_POST['password'];
 
-if (isset($code) && isset($password))) {
+if (isset($code) && isset($password)) {
     $sql = "SELECT * FROM support WHERE mcode='$code' AND password='$password'";
     $result = mysqli_query($conn, $sql);
 
