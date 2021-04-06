@@ -1,3 +1,13 @@
+<?php
+
+include("data.php");
+
+if ($_SESSION['status'] == true) {
+    header("Location: http://$ip/NarbonSupport");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
