@@ -23,8 +23,8 @@
                             <div>
                                 <div>
                                     <div class="form-group mb-4">
-                                        <label for="email" class="text-muted">Email</label>
-                                        <input type="email" name="email" id="email" class="form-control border-dark text-dark" placeholder="Email">
+                                        <label for="code" class="text-muted">Personal Code</label>
+                                        <input type="text" name="code" id="code" class="form-control border-dark text-dark" placeholder="Personal Code">
                                     </div>
                                     <div class="form-group mb-4">
                                         <label for="password" class="text-muted">Password</label>
