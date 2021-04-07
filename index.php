@@ -19,6 +19,14 @@ while ($row = mysqli_fetch_assoc($res)) {
 if ($_SESSION['status'] != true) {
     header("Location: http://$ip/NarbonSupport/account");
 }
+else {
+    $username = $_SESSION["username"];
+    ?>
+    <script>
+        window.alert("Welcome <?php echo $username; ?>");
+    </script>
+    <?php
+}
 
 include("panels/silebar.php");
 
