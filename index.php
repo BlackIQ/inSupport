@@ -1,6 +1,5 @@
 <?php
 
-session_get_cookie_params();
 session_start();
 
 $server = "localhost";
@@ -15,6 +14,20 @@ $res = mysqli_query($conn, $getip);
 
 while ($row = mysqli_fetch_assoc($res)) {
     $ip = $row['ip'];
+}
+
+if ($_SESSION['status'] == true) {
+    $directory = $_SESSION["directory"];
+
+    if ($directory == "NarbonSupport") {
+
+    }
+    elseif ($directory == "Narbon") {
+        header("Location: http://$ip/Narbon");
+    }
+    else {
+        header("Location: http://$ip/NarbonSupport");
+    }
 }
 
 include("panels/silebar.php");

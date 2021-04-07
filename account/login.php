@@ -3,7 +3,17 @@
 include("data.php");
 
 if ($_SESSION['status'] == true) {
-    header("Location: http://$ip/NarbonSupport");
+    $directory = $_SESSION["directory"];
+
+    if ($directory == "NarbonSupport") {
+
+    }
+    elseif ($directory == "Narbon") {
+        header("Location: http://$ip/Narbon");
+    }
+    else {
+        header("Location: http://$ip/NarbonSupport");
+    }
 }
 
 $code = $_POST['code'];
@@ -19,7 +29,7 @@ if (isset($code) && isset($password)) {
             $_SESSION['id'] = $code;
             $_SESSION["error"] = "200";
             $_SESSION["username"] = $row["username"];
-            $_SESSION["icode"] = $row["icode"];
+            $_SESSION["directory"] = "NarbonSupport";
             header("Location: http://$ip/NarbonSupport");
         }
     }

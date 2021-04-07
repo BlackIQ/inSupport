@@ -3,7 +3,17 @@
 include("data.php");
 
 if ($_SESSION['status'] == true) {
-    header("Location: http://$ip/NarbonSupport");
+    $directory = $_SESSION["directory"];
+
+    if ($directory == "NarbonSupport") {
+
+    }
+    elseif ($directory == "Narbon") {
+        header("Location: http://$ip/Narbon");
+    }
+    else {
+        header("Location: http://$ip/NarbonSupport");
+    }
 }
 
 ?>
