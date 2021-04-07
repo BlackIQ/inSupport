@@ -29,7 +29,7 @@ if ($_SESSION['status'] == true) {
                         <h1 class="display-6">Login to your account</h1>
                         <hr class="border-dark border">
                         <br>
-                        <form action="#!">
+                        <form action="login.php" method="post">
                             <div>
                                 <div>
                                     <div class="form-group mb-4">
