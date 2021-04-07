@@ -16,18 +16,6 @@ while ($row = mysqli_fetch_assoc($res)) {
     $ip = $row['ip'];
 }
 
-if ($_SESSION['status'] != true) {
-    header("Location: http://$ip/NarbonSupport/account");
-}
-else {
-    $username = $_SESSION["username"];
-    ?>
-    <script>
-        window.alert("Welcome <?php echo $username; ?>");
-    </script>
-    <?php
-}
-
 include("panels/silebar.php");
 
 $sql = "SELECT * FROM institute";
@@ -54,6 +42,21 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="assets/css/demo.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <?php
+
+    if ($_SESSION['status'] != true) {
+        header("Location: http://$ip/NarbonSupport/account");
+    }
+    else {
+        $username = $_SESSION["username"];
+        ?>
+        <script>
+            window.alert("Welcome <?php echo $username; ?>");
+        </script>
+        <?php
+    }
+
+    ?>
 </head>
 
 <body>
