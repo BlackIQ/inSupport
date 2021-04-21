@@ -4,10 +4,10 @@ session_start();
 
 function index() {
     
-    $server = "localhost";
-    $user = "narbon";
-    $passwd = "narbon";
-    $db = "narbonn";
+    $server = "";
+    $user = "";
+    $passwd = "";
+    $db = "";
 
     $conn = mysqli_connect($server, $user, $passwd, $db);
 
@@ -62,10 +62,10 @@ function index() {
 
 function tickets() {
     
-    $server = "localhost";
-    $user = "narbon";
-    $passwd = "narbon";
-    $db = "narbonn";
+    $server = "";
+    $user = "";
+    $passwd = "";
+    $db = "";
 
     $conn = mysqli_connect($server, $user, $passwd, $db);
 
